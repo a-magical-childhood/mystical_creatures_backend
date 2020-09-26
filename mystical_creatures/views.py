@@ -1,16 +1,18 @@
 from django.shortcuts import render
-from rest_framework import generics
- 
-from .models import Creatures
+from rest_framework.generics import (
+    ListCreateAPIView,
+    RetrieveUpdateDestroyAPIView,
+) 
+from .models import Creatures as CreaturesModel
 from .serializers import CreaturesSerializer
 
 #  Create your views here.
-class Creatures(generics.ListCreateAPIView):
-  queryset = Creatures.objects.all()
+class CreaturesList(ListCreateAPIView):
+  queryset = CreaturesModel.objects.all()
   serializer_class = CreaturesSerializer
 
-class Sightings(generics.RetrieveUpdateDestroyAPIView):
-  queryset = Creatures.objects.all()
+class CreaturesDetail(RetrieveUpdateDestroyAPIView):
+  queryset = CreaturesModel.objects.all()
   serializer_class = CreaturesSerializer
 
 

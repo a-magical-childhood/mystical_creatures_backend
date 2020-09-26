@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import Creatures
+from .views import CreaturesList, CreaturesDetail
  
 urlpatterns = [
-  path('', creatures.as_view(), name="creatures"),
-  path('<int:pk>/', sightings.as_view(), name="sightings"),
+  path('', CreaturesList.as_view(), name="creatures"),
+  path('sightings/<int:pk>/', CreaturesDetail.as_view(), name="creatures_details"),
 ]

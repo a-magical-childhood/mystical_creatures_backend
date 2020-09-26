@@ -4,11 +4,11 @@ from django.db import models
 
 class Creatures(models.Model):
   id = models.IntegerField
-  creature_name = models.CharField
-  latitude = models.CharField
-  longitude = models.CharField
-  description = models.CharField(default = "option")
-  explorer = models.CharField(default = "option")
+  creature_name = models.CharField(max_length=255)
+  latitude = models.CharField(max_length=255)
+  longitude = models.CharField(max_length=255)
+  description = models.TextField(default = "option")
+  explorer = models.TextField(default = "option")
 
-  def __str__(self):
-    return self.creature_name + self.description
+  # def __str__(self):
+  #   return self.creature_name + self.description
