@@ -4,7 +4,6 @@ build:
 release:
   image: web
   command:
-    - mkdir -p static
     - python manage.py collectstatic --noinput
 run:
-  web: mkdir static && ./manage.py collectstatic && gunicorn aMagicalChildhood.wsgi
+  web: gunicorn aMagicalChildhood.wsgi
