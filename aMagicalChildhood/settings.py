@@ -146,11 +146,10 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST=[
     "http://localhost:19002",
+    "https://heroku-magical-creatures.herokuapp.com",
+
 ]
 
-# CORS_ORIGIN_REGEX_WHITELIST = [
-    # r"^htpps://xxx-next.\w+\.vercel.app$",
-# ]
 
 
 
