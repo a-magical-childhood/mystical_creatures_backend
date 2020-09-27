@@ -14,10 +14,12 @@ import environ
 from pathlib import Path
 
 env = environ.Env(
-		DEBUG=(bool,False)
+		DEBUG=(bool,False),
+        ENVIRONMENT=(str,'PRODUCTION')
 )
 #read .env file
 environ.Env.read_env()  #this is class or static method
+ENVIRONMENT = env.str('ENVIRONMENT')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
