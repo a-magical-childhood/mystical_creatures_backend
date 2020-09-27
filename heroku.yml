@@ -1,5 +1,10 @@
 build:
   docker:
     web: Dockerfile
+release:
+  image: web
+  command:
+    - mkdir -p static
+    - python manage.py collecstatic --noinput
 run:
-  web: bundle exec puma -C config/puma.rb
+  web: gunicorn magical_creatures.wsgi
