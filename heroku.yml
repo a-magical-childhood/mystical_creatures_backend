@@ -5,6 +5,6 @@ release:
   image: web
   command:
     - mkdir -p static
-    - python manage.py collectstatic --noinput
+    - docker-compose exec web python manage.py collectstatic --noinput
 run:
   web: gunicorn aMagicalChildhood.wsgi
