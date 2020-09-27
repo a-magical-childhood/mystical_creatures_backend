@@ -7,4 +7,4 @@ release:
     - mkdir -p static
     - python manage.py collecstatic --noinput
 run:
-  web: gunicorn magical_creatures.wsgi
+  web: gunicorn aMagicalChildhood.wsgi

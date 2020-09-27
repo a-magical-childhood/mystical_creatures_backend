@@ -3,7 +3,7 @@ category = "dev"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 name = "appdirs"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
 version = "1.4.4"
 
 [[package]]
